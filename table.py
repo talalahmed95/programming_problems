@@ -1,13 +1,13 @@
-num = input("enter a number: ")
-num_list = []
-res = []
-num = int(num)
-for i in range(num):
-    res.append(i+1)
-    res.append(num * (i+1))
+multiplier = input("enter multiplier: ")
+multiplicand_range = input("enter multiplicand range: ")
 
-print(res)
+product_list = []
 
-print("======================")
-for x in res:
-    print(num, "x", x, "=", x)
+multiplier = int(multiplier)
+multiplicand_range = int(multiplicand_range)
+
+for i in range(multiplicand_range):
+    product_list.append(multiplier * (i+1))
+
+for index, val in enumerate(product_list):
+    print(multiplier, "x", index+1, "=", val)
