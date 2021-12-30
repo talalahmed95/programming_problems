@@ -54,12 +54,23 @@
 #         matched = True
 
 
-guess_list = ['a', 'b', 'c', 'a', 'c', 'z', 'm', 'n']
+guess_list = ['a', 'a', 'b', 'a', 'c', 'z', 'c', 'n', 'k', 'a']
 res = []
-tries = 1
+res2 = []
+tries = 0
 for i in range(len(guess_list)):
     for j in range(i+1, len(guess_list)):
+        # if guess_list[i] == guess_list[j]:
+        #     print(guess_list[i], guess_list[j])
+        #     tries += 1
+
         if guess_list[i] == guess_list[j]:
-            tries += 1
+            res.append(guess_list[i])
+            res2.append(guess_list[j])
+            if guess_list[j] in res:
+                print(guess_list[i], guess_list[j])
+                tries += 1
 
 print("Number of dup:", tries)
+print(res)
+print(res2)
